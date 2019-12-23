@@ -41,9 +41,9 @@ namespace dsa.DoublyLinkedList
             }
             else
             {
-                temp = Head;
                 Head = node;
                 Head.Next = temp;
+                temp.Prev = Head;
             }
             count++;
         }
@@ -62,6 +62,7 @@ namespace dsa.DoublyLinkedList
             else
             {
                 Tail.Next = node;
+                node.Prev = Tail;
             }
 
             Tail = node;
@@ -82,6 +83,7 @@ namespace dsa.DoublyLinkedList
             else
             {
                 Head = Head.Next;
+                Head.Prev = null;
             }
             count--;
         }
@@ -99,15 +101,10 @@ namespace dsa.DoublyLinkedList
             }
             else
             {
-                DoublyLinkedListNode current = Head;
-                while(current.Next != Tail)
-                {
-                    current = current.Next;
-                }
-
-                current.Next = null;
-                Tail = current;
+                Tail.Prev.Next = null;
+                Tail = Tail.Prev;
             }
+            count--;
         }
 
         public void Remove(int value)
@@ -127,6 +124,11 @@ namespace dsa.DoublyLinkedList
                         if(current.Next == null)
                         {
                             Tail = previous;
+                        }
+                        else
+                        {
+                            //Only in case of middle element removal. we set the prev
+                            current.Next.Prev = previous;
                         }
                     }
                     else

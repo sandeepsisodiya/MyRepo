@@ -13,18 +13,14 @@ namespace dsa
     {
         static void Main(string[] args)
         {
-            LinkedList();
+            // LinkedList();
+            DoublyLinkedList();
         }
 
         static void LinkedList()
         {
             LinkedList.LinkedList llst = new LinkedList.LinkedList();
 
-
-            //PrintLinkedList(dllst);
-            //dllst.AddFirst(3);
-            //dllst.AddFirst(5);
-            //dllst.AddFirst(7);
             llst.AddLast(9);
             llst.AddLast(11);
             llst.AddLast(13);
@@ -35,20 +31,24 @@ namespace dsa
             llst.AddLast(23);
 
             PrintLinkedList(llst);
-            Console.WriteLine("Remove 1");
+            Console.WriteLine("Remove 17");
             llst.Remove(17);
             PrintLinkedList(llst);
 
-            Console.WriteLine("Remove 2");
+            Console.WriteLine("Remove 13");
             llst.Remove(13);
             PrintLinkedList(llst);
 
-            Console.WriteLine("Remove 3");
+            Console.WriteLine("Remove 21");
             llst.Remove(21);
             PrintLinkedList(llst);
 
-            Console.WriteLine("Remove 4");
+            Console.WriteLine("Remove 23");
             llst.Remove(23);
+            PrintLinkedList(llst);
+
+            Console.WriteLine("Remove 9");
+            llst.Remove(9);
             PrintLinkedList(llst);
             Console.Read();
 
@@ -70,11 +70,6 @@ namespace dsa
         {
             DoublyLinkedList.DoublyLinkedList dllst = new DoublyLinkedList.DoublyLinkedList();
 
-
-            //PrintLinkedList(dllst);
-            //dllst.AddFirst(3);
-            //dllst.AddFirst(5);
-            //dllst.AddFirst(7);
             dllst.AddLast(9);
             dllst.AddLast(11);
             dllst.AddLast(13);
@@ -85,28 +80,27 @@ namespace dsa
             dllst.AddLast(23);
 
             PrintLinkedList(dllst);
-            Console.WriteLine("Remove 1");
+            Console.WriteLine("Remove 17");
             dllst.Remove(17);
             PrintLinkedList(dllst);
 
-            Console.WriteLine("Remove 2");
+            Console.WriteLine("Remove 13");
             dllst.Remove(13);
             PrintLinkedList(dllst);
 
-            Console.WriteLine("Remove 3");
+            Console.WriteLine("Remove 21");
             dllst.Remove(21);
             PrintLinkedList(dllst);
 
-            Console.WriteLine("Remove 4");
+            Console.WriteLine("Remove 23");
             dllst.Remove(23);
             PrintLinkedList(dllst);
-            Console.Read();
 
-
-            Console.WriteLine("Remove 5");
+            Console.WriteLine("Remove 9");
             dllst.Remove(9);
             PrintLinkedList(dllst);
             Console.Read();
+
             void PrintLinkedList(DoublyLinkedList.DoublyLinkedList locadllst)
             {
                 foreach (int val in locadllst.GetEnumrator())

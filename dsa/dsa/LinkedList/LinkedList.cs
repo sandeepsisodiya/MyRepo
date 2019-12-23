@@ -106,6 +106,7 @@ namespace dsa.LinkedList
                 current.Next = null;
                 Tail = current;
             }
+            count--;
         }
 
         public void Remove(int value)
