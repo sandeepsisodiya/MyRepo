@@ -4,36 +4,36 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace dsa
+namespace dsa.DoublyLinkedList
 {
-    public class LinkedListNode
+    public class DoublyLinkedListNode
     {
         public int Value { get; set; }
 
-        public LinkedListNode(int value)
+        public DoublyLinkedListNode(int value)
         {
             Value = value;
         }
-
-        public LinkedListNode Next { get; set; }
+        public DoublyLinkedListNode Prev { get; set; }
+        public DoublyLinkedListNode Next { get; set; }
     }
-    class LinkedList 
-    {
-        //LinkedListNode node = new LinkedListNode(3);
 
-        public LinkedListNode Head { get; private set; }
-        public LinkedListNode Tail { get; private set; }
+    public class DoublyLinkedList
+    {
+
+        public DoublyLinkedListNode Head { get; private set; }
+        public DoublyLinkedListNode Tail { get; private set; }
 
         int count = 0;
 
         public void AddFirst(int value)
         {
-            AddFirst(new LinkedListNode(value));
+            AddFirst(new DoublyLinkedListNode(value));
         }
 
-        public void AddFirst(LinkedListNode node)
+        public void AddFirst(DoublyLinkedListNode node)
         {
-            LinkedListNode temp = Head;
+            DoublyLinkedListNode temp = Head;
             if(count == 0)
             {
                 Head = node;
@@ -50,10 +50,10 @@ namespace dsa
 
         public void AddLast(int value)
         {
-            AddLast(new LinkedListNode(value));
+            AddLast(new DoublyLinkedListNode(value));
         }
 
-        public void AddLast(LinkedListNode node)
+        public void AddLast(DoublyLinkedListNode node)
         {
             if(count == 0)
             {
@@ -83,7 +83,6 @@ namespace dsa
             {
                 Head = Head.Next;
             }
-
             count--;
         }
 
@@ -100,7 +99,7 @@ namespace dsa
             }
             else
             {
-                LinkedListNode current = Head;
+                DoublyLinkedListNode current = Head;
                 while(current.Next != Tail)
                 {
                     current = current.Next;
@@ -113,30 +112,36 @@ namespace dsa
 
         public void Remove(int value)
         {
-            LinkedListNode previous = Head;
-            LinkedListNode current = Head;
-            if(count == 1 && Head.Value == value)
+            DoublyLinkedListNode previous = null;
+            DoublyLinkedListNode current = Head;
+
+            while(current !=null)
             {
-                Head = null;
-                Tail = null;
-            }
-            else if(count > 1)
-            {
-                while(current.Value != value)
+                if(current.Value.Equals(value))
                 {
-                    previous = current;
-                    current = current.Next;
+                    if (previous != null)
+                    {
+                        previous.Next = current.Next;
+                        count--;
+
+                        if(current.Next == null)
+                        {
+                            Tail = previous;
+                        }
+                    }
+                    else
+                    {
+                        RemoveFirst();
+                    }
                 }
-
-                previous.Next = current.Next;
+                previous = current;
+                current = current.Next;
             }
-
-            count--;
         }
 
         public IEnumerable<int> GetEnumrator()
         {
-            LinkedListNode current = Head;
+            DoublyLinkedListNode current = Head;
             while(current != null)
             {
                 yield return current.Value;
