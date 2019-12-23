@@ -147,5 +147,13 @@ namespace dsa.LinkedList
                 current = current.Next;
             }
         }
+
+        public void PrintLinkedList(LinkedList locadllst)
+        {
+            foreach (int val in locadllst.GetEnumrator())
+            {
+                Console.WriteLine(val);
+            }
+        }
     }
 }

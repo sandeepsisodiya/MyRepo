@@ -150,5 +150,13 @@ namespace dsa.DoublyLinkedList
                 current = current.Next;
             }
         }
+
+        public void PrintDoublyLinkedList(DoublyLinkedList locadllst)
+        {
+            foreach (int val in locadllst.GetEnumrator())
+            {
+                Console.WriteLine(val);
+            }
+        }
     }
 }
