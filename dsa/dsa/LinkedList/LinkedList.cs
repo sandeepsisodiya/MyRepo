@@ -138,6 +138,17 @@ namespace dsa.LinkedList
             }
         }
 
+        public int Count
+        {
+           get { return count; }
+        }
+
+        public void Clear()
+        {
+            Head = null;
+            Tail = null;
+        }
+
         public IEnumerable<int> GetEnumrator()
         {
             LinkedListNode current = Head;

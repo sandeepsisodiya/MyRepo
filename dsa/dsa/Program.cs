@@ -14,7 +14,10 @@ namespace dsa
         static void Main(string[] args)
         {
             //LinkedList();
-            DoublyLinkedList();
+            //DoublyLinkedList();
+            //StackArray();
+            Stack();
+
         }
 
         static void LinkedList()
@@ -90,6 +93,88 @@ namespace dsa
             dllst.PrintDoublyLinkedList(dllst);
 
             Console.Read();
+        }
+
+        static void StackArray()
+        {
+            Stack.StackArray stackarr = new Stack.StackArray();
+
+            stackarr.Push(9);
+            stackarr.Push(8);
+            stackarr.Push(7);
+            stackarr.Push(6);
+            stackarr.Push(5);
+            stackarr.Push(4);
+            stackarr.Push(3);
+            stackarr.Push(2);
+            stackarr.Push(1);
+
+            foreach(int val in stackarr.GetEnumerator())
+            {
+                Console.WriteLine(val);
+            }
+
+            Console.WriteLine("Peek");
+            Console.WriteLine(stackarr.Peek());
+            Console.WriteLine(stackarr.Peek());
+            Console.WriteLine(stackarr.Peek());
+            Console.WriteLine(stackarr.Peek());
+
+            Console.WriteLine("Pop");
+            Console.WriteLine(stackarr.Pop());
+            Console.WriteLine(stackarr.Pop());
+            Console.WriteLine(stackarr.Pop());
+            Console.WriteLine(stackarr.Pop());
+
+            Console.WriteLine("Remaining");
+            foreach (int val in stackarr.GetEnumerator())
+            {
+                Console.WriteLine(val);
+            }
+
+            Console.Read();
+
+        }
+
+        static void Stack()
+        {
+            Stack.Stack stack = new Stack.Stack();
+
+            stack.Push(9);
+            stack.Push(8);
+            stack.Push(7);
+            stack.Push(6);
+            stack.Push(5);
+            stack.Push(4);
+            stack.Push(3);
+            stack.Push(2);
+            stack.Push(1);
+
+            foreach (int val in stack.GetEnumerator())
+            {
+                Console.WriteLine(val);
+            }
+
+            Console.WriteLine("Peek");
+            Console.WriteLine(stack.Peek());
+            Console.WriteLine(stack.Peek());
+            Console.WriteLine(stack.Peek());
+            Console.WriteLine(stack.Peek());
+
+            Console.WriteLine("Pop");
+            Console.WriteLine(stack.Pop());
+            Console.WriteLine(stack.Pop());
+            Console.WriteLine(stack.Pop());
+            Console.WriteLine(stack.Pop());
+
+            Console.WriteLine("Remaining");
+            foreach (int val in stack.GetEnumerator())
+            {
+                Console.WriteLine(val);
+            }
+
+            Console.Read();
+
         }
     }
 }
