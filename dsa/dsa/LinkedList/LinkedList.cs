@@ -17,7 +17,7 @@ namespace dsa.LinkedList
 
         public LinkedListNode Next { get; set; }
     }
-    class LinkedList 
+    public class LinkedList 
     {
         public LinkedListNode Head { get; private set; }
         public LinkedListNode Tail { get; private set; }

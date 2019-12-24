@@ -3,8 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using dsa.DoublyLinkedList;
-using dsa.LinkedList;
+using dsa.Queue;
 
 
 namespace dsa
@@ -16,7 +15,12 @@ namespace dsa
             //LinkedList();
             //DoublyLinkedList();
             //StackArray();
-            Stack();
+            //Stack();
+
+            //string line = Console.ReadLine();
+            //PostFixCalculator(line.Split(' '));
+
+            QueueLinkedList();
 
         }
 
@@ -155,6 +159,7 @@ namespace dsa
                 Console.WriteLine(val);
             }
 
+
             Console.WriteLine("Peek");
             Console.WriteLine(stack.Peek());
             Console.WriteLine(stack.Peek());
@@ -169,6 +174,52 @@ namespace dsa
 
             Console.WriteLine("Remaining");
             foreach (int val in stack.GetEnumerator())
+            {
+                Console.WriteLine(val);
+            }
+
+            Console.Read();
+
+        }
+
+        static void PostFixCalculator(string[] args)
+        {
+            PostFixCalculator.PostFixCalculator pfc = new PostFixCalculator.PostFixCalculator();
+            pfc.Calculate(args);
+
+            Console.Read();
+        }
+
+        static void QueueLinkedList()
+        {
+            QueueLinkedList queue = new QueueLinkedList();
+
+            queue.Enqueue(1);
+            queue.Enqueue(2);
+            queue.Enqueue(3);
+            queue.Enqueue(4);
+            queue.Enqueue(5);
+            queue.Enqueue(6);
+            queue.Enqueue(7);
+
+            foreach (int val in queue.GetEnumerator())
+            {
+                Console.WriteLine(val);
+            }
+
+
+            Console.WriteLine("Peek");
+            Console.WriteLine(queue.Peek());
+            Console.WriteLine(queue.Peek());
+
+            Console.WriteLine("Pop");
+            Console.WriteLine(queue.Dequeue());
+            Console.WriteLine(queue.Dequeue());
+            Console.WriteLine(queue.Dequeue());
+            Console.WriteLine(queue.Dequeue());
+
+            Console.WriteLine("Remaining");
+            foreach (int val in queue.GetEnumerator())
             {
                 Console.WriteLine(val);
             }
