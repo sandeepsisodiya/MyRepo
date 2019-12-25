@@ -20,14 +20,19 @@ namespace dsa
             //string line = Console.ReadLine();
             //PostFixCalculator(line.Split(' '));
 
-            QueueLinkedList();
+            //QueueLinkedList();
 
+            PriorityQueue();
         }
 
         static void LinkedList()
         {
             LinkedList.LinkedList llst = new LinkedList.LinkedList();
 
+            llst.AddBefore(3, 7);
+            llst.AddBefore(7, 7);
+            llst.AddBefore(5, 7);
+            /*
             llst.AddLast(9);
             llst.AddLast(11);
             llst.AddLast(13);
@@ -57,7 +62,7 @@ namespace dsa
             Console.WriteLine("Remove 9");
             llst.Remove(9);
             llst.PrintLinkedList(llst);
-  
+            */
 
             Console.Read();
         }
@@ -226,6 +231,48 @@ namespace dsa
 
             Console.Read();
 
+        }
+
+        static void PriorityQueue()
+        {
+            PriorityQueue pq = new PriorityQueue();
+
+            pq.Enqueue(3);
+            pq.Enqueue(7);
+            pq.Enqueue(5);
+            pq.Enqueue(8);
+            pq.Enqueue(9);
+            pq.Enqueue(6);
+            pq.Enqueue(11);
+            pq.Enqueue(2);
+
+            foreach (int val in pq.GetEnumerator())
+            {
+                Console.WriteLine(val);
+            }
+
+            Console.WriteLine("Peek");
+            Console.WriteLine(pq.Peek());
+            Console.WriteLine(pq.Peek());
+
+            Console.WriteLine("Dequeue");
+            Console.WriteLine(pq.Dequeue());
+            Console.WriteLine(pq.Dequeue());
+            Console.WriteLine(pq.Dequeue());
+            Console.WriteLine(pq.Dequeue());
+
+            Console.WriteLine("Peek");
+            Console.WriteLine(pq.Peek());
+            Console.WriteLine(pq.Peek());
+
+            Console.WriteLine("Remaining");
+            foreach (int val in pq.GetEnumerator())
+            {
+                Console.WriteLine(val);
+            }
+
+
+            Console.Read();
         }
     }
 }

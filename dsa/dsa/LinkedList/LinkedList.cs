@@ -17,7 +17,7 @@ namespace dsa.LinkedList
 
         public LinkedListNode Next { get; set; }
     }
-    public class LinkedList 
+    public class LinkedList
     {
         public LinkedListNode Head { get; private set; }
         public LinkedListNode Tail { get; private set; }
@@ -32,7 +32,7 @@ namespace dsa.LinkedList
         public void AddFirst(LinkedListNode node)
         {
             LinkedListNode temp = Head;
-            if(count == 0)
+            if (count == 0)
             {
                 Head = node;
                 Tail = node;
@@ -53,7 +53,7 @@ namespace dsa.LinkedList
 
         public void AddLast(LinkedListNode node)
         {
-            if(count == 0)
+            if (count == 0)
             {
                 Head = node;
             }
@@ -66,13 +66,50 @@ namespace dsa.LinkedList
             count++;
         }
 
+        public void AddBefore(int val, int before)
+        {
+            AddBefore(new LinkedListNode(val), before);
+        }
+
+        public void AddBefore(LinkedListNode node, int before)
+        {
+            LinkedListNode prev = null;
+            LinkedListNode current = Head;
+
+            while (current != null)
+            {
+                if (current.Value == before)
+                {
+                    if(prev == null)
+                    {
+                        AddFirst(node);
+                    }
+                    else
+                    {
+                        prev.Next = node;
+                        node.Next = current;
+                    }
+
+                    break;
+                }
+
+                prev = current;
+                current = current.Next;
+            }
+            if (prev == null)
+            {
+                Head = node;
+                Tail = Head;
+            }
+        }
+
         public void RemoveFirst()
         {
             if (count == 0)
             {
                 return;
             }
-            else if(count == 1)
+            else if (count == 1)
             {
                 Head = null;
                 Tail = null;
@@ -86,11 +123,11 @@ namespace dsa.LinkedList
 
         public void RemoveLast()
         {
-            if(count == 0)
+            if (count == 0)
             {
                 return;
             }
-            else if(count == 1)
+            else if (count == 1)
             {
                 Head = null;
                 Tail = null;
@@ -98,7 +135,7 @@ namespace dsa.LinkedList
             else
             {
                 LinkedListNode current = Head;
-                while(current.Next != Tail)
+                while (current.Next != Tail)
                 {
                     current = current.Next;
                 }
@@ -114,16 +151,16 @@ namespace dsa.LinkedList
             LinkedListNode previous = null;
             LinkedListNode current = Head;
 
-            while(current !=null)
+            while (current != null)
             {
-                if(current.Value.Equals(value))
+                if (current.Value.Equals(value))
                 {
                     if (previous != null)
                     {
                         previous.Next = current.Next;
                         count--;
 
-                        if(current.Next == null)
+                        if (current.Next == null)
                         {
                             Tail = previous;
                         }
@@ -140,7 +177,7 @@ namespace dsa.LinkedList
 
         public int Count
         {
-           get { return count; }
+            get { return count; }
         }
 
         public void Clear()
@@ -152,7 +189,7 @@ namespace dsa.LinkedList
         public IEnumerable<int> GetEnumrator()
         {
             LinkedListNode current = Head;
-            while(current != null)
+            while (current != null)
             {
                 yield return current.Value;
                 current = current.Next;
