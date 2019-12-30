@@ -8,7 +8,7 @@ namespace dsa2.Arrays.Sorting
 {
     class BubbleSort
     {
-        public static int[] BubbleSortig(int[] inputarr)
+        public static int[] BubbleSorting(int[] inputarr)
         {
             int i, j, temp;
             for (i = inputarr.Length - 2; i >= 0; i--)

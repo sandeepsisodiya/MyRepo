@@ -67,7 +67,7 @@ namespace dsa2
 
             //dsa2.Arrays.Sorting.SelectionSort.SelectionSorting(intarr);
 
-            dsa2.Arrays.Sorting.BubbleSort.BubbleSortig(intarr);
+            dsa2.Arrays.Sorting.BubbleSort.BubbleSorting(intarr);
 
             Console.WriteLine("END");
             #endregion  
