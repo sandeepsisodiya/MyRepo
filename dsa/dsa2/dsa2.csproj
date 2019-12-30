@@ -4,10 +4,10 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{20A589A0-C97F-48E9-BFA7-665929978085}</ProjectGuid>
+    <ProjectGuid>{AE39EED3-51E4-4055-B381-84C1060C85AC}</ProjectGuid>
     <OutputType>Exe</OutputType>
-    <RootNamespace>dsa</RootNamespace>
-    <AssemblyName>dsa</AssemblyName>
+    <RootNamespace>dsa2</RootNamespace>
+    <AssemblyName>dsa2</AssemblyName>
     <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
@@ -43,20 +43,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="BinarySearchTree\BinarySearchTree.cs" />
-    <Compile Include="DoublyLinkedList\DoublyLinkedList.cs" />
-    <Compile Include="LinkedList\LinkedList.cs" />
-    <Compile Include="PostFixCalculator\PostFixCalculator.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Queue\PriorityQueue.cs" />
-    <Compile Include="Queue\QueueLinkedList.cs" />
-    <Compile Include="Stack\Stack.cs" />
-    <Compile Include="Stack\StackArray.cs" />
+    <Compile Include="SingleLinkedList\SingleLinkedList.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

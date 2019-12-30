@@ -101,6 +101,7 @@ namespace dsa.LinkedList
                 Head = node;
                 Tail = Head;
             }
+            count++;
         }
 
         public void RemoveFirst()
