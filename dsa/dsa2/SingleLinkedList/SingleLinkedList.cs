@@ -261,6 +261,17 @@ namespace dsa2.SingleLinkedList
 
             Head = prev;
         }
+
+        public void BubbleSortByData()
+        {
+            BuubleSort.BubbleSortByData(Head);
+        }
+
+        public void BubbleSortByReference()
+        {
+            BuubleSort.BubbleSortByReference(Head);
+        }
+
         public void Print()
         {
             if(Head != null)

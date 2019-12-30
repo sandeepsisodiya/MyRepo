@@ -43,12 +43,17 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Arrays\Sorting\BubbleSort.cs" />
+    <Compile Include="Arrays\Sorting\SelectionSort.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SingleLinkedList\BuubleSort.cs" />
+    <Compile Include="SingleLinkedList\MergeSortedLinkedList.cs" />
     <Compile Include="SingleLinkedList\SingleLinkedList.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
