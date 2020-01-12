@@ -22,7 +22,9 @@ namespace dsa
 
             //QueueLinkedList();
 
-            PriorityQueue();
+            //PriorityQueue();
+
+            Hashing();
         }
 
         static void LinkedList()
@@ -273,6 +275,27 @@ namespace dsa
 
 
             Console.Read();
+        }
+
+        static void Hashing()
+        {
+            dsa.Hashing.LinearProbing lp = new Hashing.LinearProbing(11);
+
+            lp.Add(2);
+            lp.Add(7);
+            lp.Add(91);
+            lp.Add(45);
+            lp.Add(3);
+            lp.Add(79);
+            lp.Add(23);
+
+            lp.Print();
+
+            Console.WriteLine(lp.Contains(79));
+            Console.WriteLine(lp.Contains(44));
+
+
+            Console.ReadLine();
         }
     }
 }
