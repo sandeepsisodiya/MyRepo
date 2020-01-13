@@ -80,7 +80,7 @@ namespace dsa2
             string ToSearch = "THIS IS AN AWSOME DAY, AWS";
             string ToFind = "AWS";
 
-            StringSearch.NaiveSerach<char> ns = new StringSearch.NaiveSerach<char>();
+            StringSearch.NaiveSearch<char> ns = new StringSearch.NaiveSearch<char>();
 
             foreach (ISearchMatch iss in ns.Search(ToFind, ToSearch))
             {

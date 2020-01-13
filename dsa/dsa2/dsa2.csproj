@@ -50,7 +50,7 @@
     <Compile Include="SingleLinkedList\BuubleSort.cs" />
     <Compile Include="SingleLinkedList\MergeSortedLinkedList.cs" />
     <Compile Include="SingleLinkedList\SingleLinkedList.cs" />
-    <Compile Include="StringSearch\NaiveSerach.cs" />
+    <Compile Include="StringSearch\NaiveSearch.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />

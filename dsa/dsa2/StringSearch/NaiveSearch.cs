@@ -37,7 +37,7 @@ namespace dsa2.StringSearch
 
 
 
-    public class NaiveSerach<T> : IStringSearchAlgorithm
+    public class NaiveSearch<T> : IStringSearchAlgorithm
          where T : IComparable<T>
     {
 
