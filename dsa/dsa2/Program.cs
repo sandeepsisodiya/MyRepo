@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using dsa2.SingleLinkedList;
+using dsa2.StringSearch;
 
 namespace dsa2
 {
@@ -58,19 +59,49 @@ namespace dsa2
             //Console.WriteLine("Hold");
             #endregion
 
+
             #region Arrays - Sorting
+            /*
+          Console.Write("Enter Array input: ");
+          string str = Console.ReadLine();
 
-            Console.Write("Enter Array input: ");
-            string str = Console.ReadLine();
+          int[] intarr = Array.ConvertAll<string, int>(str.Split(' '), int.Parse);
 
-            int[] intarr = Array.ConvertAll<string, int>(str.Split(' '), int.Parse);
+          //dsa2.Arrays.Sorting.SelectionSort.SelectionSorting(intarr);
 
-            //dsa2.Arrays.Sorting.SelectionSort.SelectionSorting(intarr);
+          dsa2.Arrays.Sorting.BubbleSort.BubbleSorting(intarr);
 
-            dsa2.Arrays.Sorting.BubbleSort.BubbleSorting(intarr);
+          Console.WriteLine("END");
+          */
+            #endregion
+
+            #region String Search (Naive Algorithm)
+
+            string ToSearch = "THIS IS AN AWSOME DAY, AWS";
+            string ToFind = "AWS";
+
+            StringSearch.NaiveSerach<char> ns = new StringSearch.NaiveSerach<char>();
+
+            foreach (ISearchMatch iss in ns.Search(ToFind, ToSearch))
+            {
+                Console.WriteLine(iss.startindex + " " + iss.stringlen);
+            }
 
             Console.WriteLine("END");
-            #endregion  
+            #endregion
+
+            #region
+            #endregion
+            #region
+            #endregion
+            #region
+            #endregion
+            #region
+            #endregion
+
+
+
+
         }
     }
 }

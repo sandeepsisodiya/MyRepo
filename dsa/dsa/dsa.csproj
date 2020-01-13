@@ -54,6 +54,7 @@
     <Compile Include="Stack\Stack.cs" />
     <Compile Include="Stack\StackArray.cs" />
     <Compile Include="Hashing\LinearProbing.cs" />
+    <Compile Include="Hashing\QuadraticHashing.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
