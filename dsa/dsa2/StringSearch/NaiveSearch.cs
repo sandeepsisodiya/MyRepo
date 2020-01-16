@@ -11,7 +11,7 @@ namespace dsa2.StringSearch
 
     public interface IStringSearchAlgorithm
     {
-        IEnumerable<ISearchMatch> Search(string toFind, string toSearch);
+        IEnumerable<StringSearchMatch> Search(string toFind, string toSearch);
     }
 
     public class StringSearchMatch : ISearchMatch
@@ -41,7 +41,7 @@ namespace dsa2.StringSearch
          where T : IComparable<T>
     {
 
-        public IEnumerable<ISearchMatch> Search(string toFind, string toSearch)
+        public IEnumerable<StringSearchMatch> Search(string toFind, string toSearch)
         {
             if (toFind == null || toSearch == null)
             {
@@ -71,6 +71,7 @@ namespace dsa2.StringSearch
             }
         }
 
-
     }
+
+   
 }

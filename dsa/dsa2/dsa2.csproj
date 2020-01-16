@@ -51,6 +51,7 @@
     <Compile Include="SingleLinkedList\MergeSortedLinkedList.cs" />
     <Compile Include="SingleLinkedList\SingleLinkedList.cs" />
     <Compile Include="StringSearch\NaiveSearch.cs" />
+    <Compile Include="StringSearch\BoyerMooreHorspool.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
