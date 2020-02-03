@@ -178,7 +178,20 @@
                           { "Fn::FindInMap" : [ "AWSInstanceType2Arch", { "Ref" : "InstanceType" }, "Arch" ] } ] }
       }
     },
-
+	{
+    "jiradbinstance": {
+        "Type": "AWS::RDS::DBInstance",
+        "Properties": {
+            "AllocatedStorage": "20",
+            "DBInstanceClass": "db.t2.micro",
+            "Engine": "sqlserver-se",
+            "EngineVersion": "14.00.3223.3.v1",
+            "Iops": "1000",
+            "MasterUsername": "jirauser",
+            "MasterUserPassword": "jirauser"
+        }
+    }
+},
     "InstanceSecurityGroup" : {
       "Type" : "AWS::EC2::SecurityGroup",
       "Properties" : {
@@ -209,6 +222,10 @@
     "PublicIP" : {
       "Description" : "Public IP address of the newly created EC2 instance",
       "Value" : { "Fn::GetAtt" : [ "EC2Instance", "PublicIp" ] }
+    },
+    "InstanceId": {
+      "Description": "InstanceId of the newly created RDS Instance",
+      "Value": { "Ref": "jiradbinstance" }
     }
   }
 }
